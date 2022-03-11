@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+.content-container {
+    max-width: 500px;
+    margin: 0px auto;
+}
+
+.registration-block {
+    max-width: 400px;
+    height: 800px;
+
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.registration-block__row {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.registration-block__title {
+    margin-top: 40px;
+    margin-bottom: 35px;
+
+    font-size: 1.3rem;
+}
+
+.registration-block__inputs {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 70px;
+}
+
+.registration-block__checked_first,
+.registration-block__checked_second {
+    display: flex;
+    flex-direction: row;
+
+    padding: 0px 50px;
+}
+
+.registration-block__checked_first>label {
+    margin-bottom: 20px;
+    margin-left: 10px;
+
+    font-size: 0.92em;
+}
+
+.registration-block__checked_second>label {
+    margin-left: 8px;
+
+    font-size: 0.92em;
+}
+
+.registration-block__inputs>input {
+    margin-bottom: 30px;
+
+    width: 300px;
+    height: 36px;
+
+    font-size: 0.9rem;
+
+    border: none;
+    border-bottom: 1px solid rgb(206, 206, 206);
+}
+
+.registration-block__text {
+    align-self: start;
+    margin-left: 50px;
+
+    font-size: 1rem;
+
+    color: rgb(168, 168, 168);
+}
+
+#number {
+    margin-bottom: 0px;
+}
+
+.registration-block__nontel {
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    font-size: 13px;
+
+    color: #2763be;
+    text-decoration: none;
+}
+
+.registration-block__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    width: 300px;
+    height: 44px;
+
+    font-size: 16px;
+    line-height: 44px;
+    font-weight: 500;
+
+    border: none;
+    border-radius: 8px;
+    background-color: #fc0;
+    color: black;
+}
+
+.registration-block__button:hover {
+    background-color: rgb(241, 194, 3);
+    cursor: pointer;
+}
+
+label>a {
+    color: #2763be;
+    text-decoration: none;
+}
+
+label>a:hover {
+    color: #d10b0b;
+    cursor: pointer;
+}
+
+.registration-block__nontel:hover {
+    color: #d10b0b;
+    cursor: pointer;
+}
+
+.error-message,
+.error-message2,
+.error-message3,
+.error-message4,
+.error-message5 {
+    margin: 0px;
+
+    font-size: 10px;
+    color: #d10b0b;
+}

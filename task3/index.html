@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:required:valid {
+            border-color: green;
+        }
+
+        select:required:valid {
+            border-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Опрос для владельцев котиков</h1>
+    <p>Привет, любитель пушистых друзей! Пожалуйста, расскажи немного о своем питомце (а заодно и о себе)</p>
+    <p>Обрати внимание: обязательные поля для заполнения отмечены *</p>
+    <img src="https://avatars.mds.yandex.net/get-zen_doc/28064/pub_5cf28d61b2f43e00afcece18_5cf292079a90a100ae052ba8/scale_1200" alt="Любители котиков" width="400" height="300"/>
+    <form id="formElem"></form>
+        <div>
+            <label for="nick">Как зовут вашего Котика?*</label>
+            <input type="text" id="nick" placeholder="Введите кличку питомца" required  />
+        </div>
+        <fieldset>
+        <legend><b>Данные о владельце питомца</b></legend>
+        <div>
+            <label for="name">Ваше имя*</label>
+            <input type="text" id="name" placeholder="Введите ваше имя" required />
+        </div>
+        <div>
+            <label for="fio">Ваша фамилия</label>
+            <input type="text" id="fio" placeholder="Введите вашу фамилию" />
+        </div>
+        <div>
+            <label for="mail">Укажите ваш имейл*</label>
+            <input type="email" id="mail" placeholder="Пример:ivanov@mail.ru" pattern="/\A[^@]+@([^@\.]+\.)+[^@\.]+\z/" required />
+        </div>
+            <div>Укажите ваш пол</div><br />
+            <div>
+                <input type="radio" name="s" value="m" />Мужской<br />
+            <input type="radio" name="s" value="f" />Женский
+        </div>
+        </fieldset>
+        <div>
+            <div>Выберите породу вашего Котика*</div>
+            <select required>
+                <option value=""></option>
+                <option value="first option">Экзотическая кошка</option>
+                <option value="second option">Персидская кошка</option>
+                <option value="third option">Мейн-кун</option>
+                <option value="fourth option">Британская короткошёрстная кошка</option>
+                <option value="fifth option">Шотландская вислоухая</option>
+                <option value="sixth option">Канадский сфинкс</option>
+                <option value="seventh option">Сиамская кошка</option>
+                <option value="eighth option">Другая порода</option>
+                </select>
+        </div>
+        <div>
+            <div>Чем питается ваш кот?</div>
+            <input type="checkbox" value="1" />Сухой корм<br />
+            <input type="checkbox" value="2" />Влажный корм<br />
+            <input type="checkbox" value="3" />Натуральный корм
+        </div>
+            <div>Пол питомца</div><br />
+            <div>
+            <input type="radio" name="s2" value="m2" />Самец<br />
+            <input type="radio" name="s2" value="f2" />Самка
+        </div>
+        <div>
+            <div>Дополнительная информация от владельца</div>
+            <textarea rows="10" cols="60">Что мы еще должны узнать о вашем Котике?</textarea>
+        </div>
+        <div>
+            <div>Загрузите фото питомца*</div>
+            <input type="file" required />
+        </div>
+        <div><button id="btn">Сохранить</button></div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

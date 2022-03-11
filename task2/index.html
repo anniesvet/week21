@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="registration-block">
+            <div class="registration-block__row">
+                <h1 class="registration-block__title">Регистрация</h1>
+                <form class="registration-block__inputs">
+                    <input type="text" id="name" name="name" placeholder="Имя*" pattern="^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$" required />
+                    <!-- <div class="error-message" id="noname"></div> -->
+                    <input type="text" id="surname" placeholder="Фамилия*" pattern="^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{1,23})$" required />
+                    <!-- <div class="error-message2" id="nosurname"></div> -->
+                    <input type="text" id="login" placeholder="Логин*" pattern="^[a-z0-9_-]{3,16}$" required />
+                    <!-- <div class="error-message3" id="nologin"></div> -->
+                    <input type="password" id="pass" placeholder="Пароль*" pattern="^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$" required />
+                    <!-- <div class="error-message4" id="nopass"></div> -->
+                    <input type="tel" id="number" placeholder="Номер мобильного телефона" />
+                    <!-- <div class="error-message5" id="nonumber"></div> -->
+                    <a href="/" class="registration-block__nontel">У меня нет телефона</a>
+                </form>
+                <div id="errorsInfo"></div>
+                <button type="submit" class="registration-block__button" id="btn">Зарегистрироваться</button>
+                <p class="registration-block__text">Нажимая кнопку «Зарегистрироваться»:</p>
+                <div class="registration-block__checked_first">
+                    <input type="checkbox" id="agreed" name="agreed">
+                    <label for="agreed">Я принимаю условия <a href="https://yandex.ru/legal/rules/">Пользовательского соглашения</a> и даю своё согласие Яндексу на обработку моей персональной информации на условиях, определенных <a href="https://yandex.ru/legal/confidential/">Политикой конфиденциальности</a>.</label>
+                </div>
+                <div class="registration-block__checked_second">
+                    <input type="checkbox" id="disagreed" name="disagreed">
+                    <label for="disagreed">Я не хочу получать рекламу и другие предложения данного сервиса Яндекса</label>
+                </div>    
+            </div>
+        </div>    
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
