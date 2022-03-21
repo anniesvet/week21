@@ -5,8 +5,8 @@ function onSearch () {
         .then(response => response.json())
         .then(giphy => {
             console.log(giphy);
-            document.getElementById("place").src = giphy.data.url;
-            // document.getElementById("qw").innerText = data.id;
+            // document.getElementById("place").src = giphy.data.url;
+            document.getElementById("qw").innerText = JSON.stringify(giphy.data);
         })
         .catch(error => console.log(error));
 }
