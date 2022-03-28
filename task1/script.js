@@ -11,17 +11,29 @@ function onSearch () {
         .then(res => {
             console.log(res.data)
 
-            res.data.forEach(el => {
-                console.log(el.title)
-                console.log(el.images.original.url)
+            let images = document.getElementById('images');
+
+            let str = ' ';
+            for (let i = 0; i< res.data.length; i++  ) {
+            if (res.data[i]!==undefined) {
+                str +=res.data[i].title + '<br>' + res.data[i].images.original.url + '<br>';
+            } 
+            }
+
+            images.innerHTML = str;
+
+            // res.data.forEach(el => {
+            //     console.log(el.title)
+            //     console.log(el.images.original.url)
                 
-                let name = document.querySelectorAll('.name'); 
-                name.innerHTML += el.title
+            //     let name = document.querySelectorAll('.name'); 
+            //     name.innerHTML += el.title
 
-                let images = document.querySelectorAll('.place');
-                images.src += el.images.original.url
-            });
-
+            //     let images = document.querySelectorAll('.place');
+            //     images.src += el.images.original.url
+            })
+        .catch(error => console.log(error.message));
+}
             
             // document.getElementById('name1').innerHTML = res.data[0].title
             // document.getElementById('place1').src = res.data[0].images.original.url
@@ -37,7 +49,5 @@ function onSearch () {
 
             // document.getElementById('name5').innerHTML = res.data[4].title
             // document.getElementById('place5').src = res.data[4].images.original.url
-        })
-        .catch(error => console.log(error.message));
-}
+
 
