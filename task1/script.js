@@ -11,16 +11,15 @@ function onSearch () {
         .then(res => {
             console.log(res.data)
 
-            let images = document.getElementById('images');
-
-            let str = ' ';
-            for (let i = 0; i< res.data.length; i++  ) {
-            if (res.data[i]!==undefined) {
-                str +=res.data[i].title + '<br>' + res.data[i].images.original.url + '<br>';
-            } 
+            let catContent = "";
+            for (let i = 0; i< res.data.length; i++ ) {
+                catContent += `<div class ='cats'>
+                <h5>${res.data[i].title}</h5>
+                <img src=${res.data[i].images.original.url}>
+                </div>`
             }
 
-            images.innerHTML = str;
+            document.getElementById("contentContainer").innerHTML = catContent;
             })
         .catch(error => console.log(error.message));
 }
